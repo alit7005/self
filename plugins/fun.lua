@@ -1,6 +1,5 @@
 do
---Begin Fun.lua By @BeyondTeam
---Special Thx To @To0fan
+--Begin Fun.lua By @alit7005
 --------------------------------
 
 local function run_bash(str)
@@ -196,7 +195,7 @@ tdcli.sendMessage(msg.from.id, 0, 1, text, 1, 'md')
 		text = text..'\nغروب آفتاب: '..data.Sunset
 		text = text..'\nاذان مغرب: '..data.Maghrib
 		text = text..'\nعشاء : '..data.Isha
-		text = text..'\n@BeyondTeam\n'
+		text = text..'\n@alit7005\n'
 		return tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'html')
 	end
 --------------------------------
@@ -215,7 +214,7 @@ tdcli.sendMessage(msg.from.id, 0, 1, text, 1, 'md')
 					local apath = tostring(tcpath)..'/data/sticker'
 					if file_exi(tostring(name), tostring(apath), tostring(pasvand)) then
 						os.rename(file, pfile)
-						tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, pfile, "@BeyondTeam", dl_cb, nil)
+						tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, pfile, "@alit7005", dl_cb, nil)
 					else
 						tdcli.sendMessage(msg.to.id, msg.id_, 1, '_This sticker does not exist. Send sticker again._', 1, 'md')
 					end
@@ -237,7 +236,7 @@ tdcli.sendMessage(msg.from.id, 0, 1, text, 1, 'md')
 					local pfile = 'data/photos/'..file..'.webp'
 					if file_exi(file..'_(1).jpg', tcpath..'/data/photo', 'jpg') then
 						os.rename(pathf, pfile)
-						tdcli.sendDocument(msg.chat_id_, 0, 0, 1, nil, pfile, '@BeyondTeam', dl_cb, nil)
+						tdcli.sendDocument(msg.chat_id_, 0, 0, 1, nil, pfile, '@alit7005', dl_cb, nil)
 					else
 						tdcli.sendMessage(msg.to.id, msg.id_, 1, '_This photo does not exist. Send photo again._', 1, 'md')
 					end
@@ -282,7 +281,7 @@ if matches[1] == 'voice' and is_sudo(msg) then
       else
   local url = "http://tts.baidu.com/text2audio?lan=en&ie=UTF-8&text="..textc
   local file = download_to_file(url,'Self-BotV2.mp3')
- 				tdcli.sendDocument(msg.to.id, 0, 0, 1, nil, file, '@BeyondTeam', dl_cb, nil)
+ 				tdcli.sendDocument(msg.to.id, 0, 0, 1, nil, file, '@alit7005', dl_cb, nil)
    end
 end
 
@@ -290,7 +289,7 @@ end
 	if matches[1] == "tr" and is_sudo(msg) then 
 		url = https.request('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20160119T111342Z.fd6bf13b3590838f.6ce9d8cca4672f0ed24f649c1b502789c9f4687a&format=plain&lang='..URL.escape(matches[2])..'&text='..URL.escape(matches[3]))
 		data = json:decode(url)
-		return 'زبان : '..data.lang..'\nترجمه : '..data.text[1]..'\n____________________\n @BeyondTeam :)'
+		return 'زبان : '..data.lang..'\nترجمه : '..data.text[1]..'\n____________________\n @alit7005 :)'
 	end
 --------------------------------
 	if matches[1]:lower() == 'short' and is_sudo(msg) then
@@ -352,7 +351,7 @@ end
 		local url = "https://assets.imgix.net/examples/clouds.jpg?blur=150&w="..w.."&h="..h.."&fit=crop&txt="..eq.."&txtsize="..txtsize.."&txtclr="..txtclr.."&txtalign=middle,center&txtfont=Futura%20Condensed%20Medium&mono=ff6598cc"
 		local receiver = msg.to.id
 		local  file = download_to_file(url,'text.jpg')
-		tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, file, "@BeyondTeam", dl_cb, nil)
+		tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, file, "@alit7005", dl_cb, nil)
 	end
 end
 end
@@ -378,4 +377,4 @@ return {
 	run = run,
 	}
 
---#by @BeyondTeam :)
+--#by @alit7005 :)
